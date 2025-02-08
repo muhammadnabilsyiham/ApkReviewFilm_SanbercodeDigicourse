@@ -1,0 +1,36 @@
+Soal 1 :
+create DATABASE myshop;
+
+Soal 2 :
+Table users;
+create table users ( id INTEGER AUTO_INCREMENT PRIMARY KEY, name varchar(255) not null, email varchar(255) not null, password varchar(255) not null );
+
+Table categories;
+create table categories ( id INTEGER AUTO_INCREMENT PRIMARY KEY, name varchar(255) not null );
+
+Table items;
+create table items ( id INTEGER AUTO_INCREMENT PRIMARY KEY, name varchar(255) not null, description varchar(255) not null, price integer not null, stock integer not null, category_id integer not null, FOREIGN KEY (category_id) REFERENCES categories(id) );
+
+Soal 3 :
+Table users;
+INSERT INTO users (name, email, password) VALUES ("John Doe", "john@doe.com", "john123"), ("Jane Doe", "jane@doe.com", "jenita123");
+
+Table categories;
+INSERT INTO categories (name) VALUES ("gadget"), ("cloth"), ("men"), ("women"), ("branded");
+
+Table items;
+INSERT INTO items (name, description, price, stock, category_id) VALUES ("Sumsang b50", "hape keren dari merek sumsang", 4000000, 100, 1), ("Uniklooh", "baju keren dari brand ternama", 500000, 50, 2), ("IMHO Watch", "jam tangan anak yang jujur banget", 2000000, 10, 1);
+
+Soal 4 :
+Soal a;
+SELECT name, email FROM `users`;
+
+Soal b;
+- SELECT * FROM `items` WHERE price > 1000000;
+- SELECT * FROM `items` WHERE name LIKE "uniklo%";
+
+Soal c;
+SELECT items.*, categories.name FROM items INNER JOIN categories ON items.category_id = categories.id;
+
+Soal 5 :
+UPDATE items SET price = 2500000 where id = 1;
