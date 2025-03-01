@@ -6,7 +6,6 @@
 
 @section('content')
     <a href="/cast/create" class="btn btn-sm btn-primary mb-3">Add Cast</a>
-
     <table class="table">
         <thead>
             <tr>
