@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Edit Post
+    Edit Film
 @endsection
 
 @section('content')
